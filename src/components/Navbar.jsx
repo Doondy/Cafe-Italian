@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
+import logo from "../assets/logo.png"; // Import your logo PNG
 
 export default function Navbar({ currentPage, setCurrentPage }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,8 @@ export default function Navbar({ currentPage, setCurrentPage }) {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="nav-brand" onClick={() => handleClick("home")}>
-          Cafe Italian
+          <img src={logo} alt="Cafe Italian" className="nav-logo" />
+          <span>Cafe Italian</span>
         </div>
 
         <button
