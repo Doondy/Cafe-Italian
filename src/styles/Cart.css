@@ -1,0 +1,121 @@
+/* ---------- Cart Section ---------- */
+.cart-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #121212; /* Dark background */
+  color: #f4f1ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Heading */
+.cart-section h2 {
+  font-size: 2.5rem;
+  color: #b93b2b;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.cart-section p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #e0dcd5;
+}
+
+/* Cart Items Container */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Individual Cart Item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-4px);
+  background-color: #2a1f1f;
+}
+
+/* Item Details */
+.cart-item .item-name {
+  font-weight: 600;
+  color: #f4f1ee;
+}
+
+.cart-item .item-price {
+  font-weight: 500;
+  color: #b93b2b;
+}
+
+/* Empty Cart / Placeholder */
+.cart-placeholder {
+  background-color: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #e0dcd5;
+}
+
+/* Checkout Button */
+.cart-checkout {
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: #b93b2b;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart-checkout:hover {
+  background-color: #922d21;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-section h2 {
+    font-size: 2rem;
+  }
+  .cart-section p {
+    font-size: 1rem;
+  }
+  .cart-item {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+  .cart-checkout {
+    width: 100%;
+  }
+}
